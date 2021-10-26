@@ -1,0 +1,32 @@
+import java.util.Arrays;
+import java.util.Scanner;
+public class Array {
+
+	public static void main(String[] args) {
+		System.out.print("How many elements? (Max 20): ");
+		Scanner input = new Scanner(System.in);
+		int n=input.nextInt();
+		
+		while(n>20 || n<=0) {
+			System.out.println("Invalid number, Try Again!...");
+			n=input.nextInt();
+		}
+			
+		int[] numbers = new int[n];
+		fillArrayOfIntegers(numbers);
+		printArrayOfIntegers(numbers);
+		}
+	
+	private static void printArrayOfIntegers(int[] numbers) {
+		System.out.println("The array elements are: ");
+		System.out.println(Arrays.toString(numbers));
+	}
+    private static void fillArrayOfIntegers(int[] numbers) {
+		Scanner input = new Scanner(System.in);
+		
+		for (int i=0;i<=numbers.length;i++)
+			numbers[i]=input.nextInt();
+		
+	}
+	
+}
